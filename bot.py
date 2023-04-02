@@ -111,7 +111,7 @@ def cancel(update, context):
 def main():
     """Start the bot."""
     # Create the Updater and dispatcher
-    updater = Updater(token=os.environ.get('TELEGRAM_TOKEN'), use_context=True)
+    updater = Updater(token=os.getenv('TELEGRAM_TOKEN'), use_context=True)
     dispatcher = updater.dispatcher
 
     # Add conversation handlers
